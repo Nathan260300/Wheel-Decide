@@ -1,0 +1,115 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dégradé animé en fond de page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    padding: 0;
+    font-size: 1.1rem;
+    overflow-x: hidden;
+    
+    /* Dégradé animé */
+    background: linear-gradient(45deg , #f4f7f6, #ecf0f1, #3498db, #9b59b6);
+    background-size: 200% 200%;
+    animation: gradientAnimation 7s ease infinite;
+}
+
+/* Définition de l'animation de fond */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        zoom: 0.8; /* Fonctionne dans Chrome/Android */
+        -moz-transform: scale(0.8); /* Pour Firefox mobile */
+        -moz-transform-origin: top left;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    a {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+/* Conteneur principal */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.buttons {
+    width: 90%;
+    max-width: 600px;
+    height: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    gap: 10px; }
+
+.buttons a {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.choose-language a:hover {
+    background-color: #2980b9;
+}
+
+/* En-tête */
+h1 {
+    font-size: 3rem;
+    color: #3498db;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Animation d'apparition du titre */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
